@@ -1,0 +1,824 @@
+2025-12-07 16:26:59 [INFO] ==========================================
+2025-12-07 16:26:59 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-07 16:26:59 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-07 16:26:59 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-07 16:26:59 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-07 16:26:59 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-07 16:26:59 [INFO] ==========================================
+2025-12-07 16:26:59 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-07 16:26:59 [INFO] Total test examples loaded: 500
+2025-12-07 16:26:59 [INFO] Loading tokenizer...
+2025-12-07 16:27:00 [INFO] Loading base model...
+2025-12-07 16:27:06 [INFO] === Evaluating model: BASE ===
+2025-12-07 16:27:06 [INFO] [BASE] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-07 16:27:32 [INFO] [BASE] Example 1 | id=33_aug75 | lev=1395 | norm_sim=0.351
+2025-12-07 16:27:32 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 16:27:32 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-07 16:27:56 [INFO] [BASE] Example 2 | id=30_aug25 | lev=1228 | norm_sim=0.340
+2025-12-07 16:27:56 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 16:27:56 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-07 16:28:09 [INFO] [BASE] Example 3 | id=56_aug31 | lev=475 | norm_sim=0.437
+2025-12-07 16:28:09 [INFO] [BASE]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-07 16:28:09 [INFO] [BASE]   PRED: {   "part": "KittingContainer",   "sequence": [     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables": {         "agent": "Large Screw 1",         "Loc": {           "x": 0.533,           "y": 0.488,           "z": 0.172         },         "screwDiameter": 0.012       }     },     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables":
+2025-12-07 16:28:24 [INFO] [BASE] Example 4 | id=0_aug62 | lev=492 | norm_sim=0.533
+2025-12-07 16:28:24 [INFO] [BASE]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-07 16:28:24 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 799, "y": 132},         "offsetToLocation": {"x": 523, "y": 87},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess1",       "interface": "ProcessInte
+2025-12-07 16:28:48 [INFO] [BASE] Example 5 | id=23_aug15 | lev=1253 | norm_sim=0.325
+2025-12-07 16:28:48 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 16:28:48 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 719,           "y": 187         },         "offsetToLocation": {           "x": 555,           "y": 82         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-07 16:28:56 [INFO] [BASE] Example 6 | id=45 | lev=284 | norm_sim=0.447
+2025-12-07 16:28:56 [INFO] [BASE]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-07 16:28:56 [INFO] [BASE]   PRED: {   "part": "NameTag",   "sequence": [     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "0",         "y": "0",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "3",         "y": "0",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interf
+2025-12-07 16:29:15 [INFO] [BASE] Example 7 | id=22_aug21 | lev=1222 | norm_sim=0.342
+2025-12-07 16:29:15 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 16:29:15 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-07 16:29:34 [INFO] [BASE] Example 8 | id=28_aug35 | lev=1219 | norm_sim=0.342
+2025-12-07 16:29:34 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 16:29:34 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-07 16:29:52 [INFO] [BASE] Example 9 | id=15_aug58 | lev=845 | norm_sim=0.476
+2025-12-07 16:29:52 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 16:29:52 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 674, "y": 126},         "offsetToLocation": {"x": 389, "y": 114},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess2",       "interface": "ProcessInt
+2025-12-07 16:30:10 [INFO] [BASE] Example 10 | id=7_aug72 | lev=1159 | norm_sim=0.378
+2025-12-07 16:30:10 [INFO] [BASE]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-07 16:30:10 [INFO] [BASE]   PRED: {   "part": "ProductB",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 760,           "y": 155         },         "offsetToLocation": {           "x": 73,           "y": 160         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-07 16:33:12 [INFO] [BASE] Processed 20 examples so far (including resumed).
+2025-12-07 16:39:43 [INFO] [BASE] Processed 40 examples so far (including resumed).
+2025-12-07 16:46:02 [INFO] [BASE] Processed 60 examples so far (including resumed).
+2025-12-07 16:51:41 [INFO] [BASE] Processed 80 examples so far (including resumed).
+2025-12-07 16:56:27 [INFO] [BASE] Processed 100 examples so far (including resumed).
+2025-12-07 17:01:07 [INFO] [BASE] Processed 120 examples so far (including resumed).
+2025-12-07 17:05:34 [INFO] [BASE] Processed 140 examples so far (including resumed).
+2025-12-07 17:12:13 [INFO] [BASE] Processed 160 examples so far (including resumed).
+2025-12-07 17:16:58 [INFO] [BASE] Processed 180 examples so far (including resumed).
+2025-12-07 17:22:27 [INFO] [BASE] Processed 200 examples so far (including resumed).
+2025-12-07 17:26:49 [INFO] [BASE] Processed 220 examples so far (including resumed).
+2025-12-07 17:32:03 [INFO] [BASE] Processed 240 examples so far (including resumed).
+2025-12-07 17:37:37 [INFO] [BASE] Processed 260 examples so far (including resumed).
+2025-12-07 17:43:10 [INFO] [BASE] Processed 280 examples so far (including resumed).
+2025-12-07 17:47:47 [INFO] [BASE] Processed 300 examples so far (including resumed).
+2025-12-07 17:52:58 [INFO] [BASE] Processed 320 examples so far (including resumed).
+2025-12-07 17:58:32 [INFO] [BASE] Processed 340 examples so far (including resumed).
+2025-12-07 18:03:53 [INFO] [BASE] Processed 360 examples so far (including resumed).
+2025-12-07 18:09:59 [INFO] [BASE] Processed 380 examples so far (including resumed).
+2025-12-07 18:14:51 [INFO] [BASE] Processed 400 examples so far (including resumed).
+2025-12-07 18:19:29 [INFO] [BASE] Processed 420 examples so far (including resumed).
+2025-12-07 18:24:50 [INFO] [BASE] Processed 440 examples so far (including resumed).
+2025-12-07 18:30:20 [INFO] [BASE] Processed 460 examples so far (including resumed).
+2025-12-07 18:35:30 [INFO] [BASE] Processed 480 examples so far (including resumed).
+2025-12-07 18:40:43 [INFO] [BASE] Processed 500 examples so far (including resumed).
+2025-12-07 18:40:43 [INFO] [BASE] EVALUATION COMPLETE in 8016.7s
+2025-12-07 18:40:43 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-07 18:40:43 [INFO] [BASE] Avg Levenshtein distance:       900.408
+2025-12-07 18:40:43 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.406
+2025-12-07 18:40:43 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-07 18:40:43 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-07 18:40:43 [INFO]   id=50_aug81 | lev=1790 | norm_sim=0.283
+2025-12-07 18:40:43 [INFO]   id=50_aug78 | lev=1771 | norm_sim=0.289
+2025-12-07 18:40:43 [INFO]   id=50_aug61 | lev=1770 | norm_sim=0.291
+2025-12-07 18:40:43 [INFO]   id=50_aug52 | lev=1764 | norm_sim=0.294
+2025-12-07 18:40:43 [INFO]   id=50_aug25 | lev=1763 | norm_sim=0.292
+2025-12-07 18:40:43 [INFO] Loading LoRA model for evaluation...
+2025-12-07 18:40:43 [INFO] Loading tokenizer...
+2025-12-07 18:40:43 [INFO] Loading base model...
+2025-12-07 18:41:21 [INFO] === Evaluating model: LORA ===
+2025-12-07 18:41:21 [INFO] [LORA] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-07 18:42:03 [INFO] [LORA] Example 1 | id=33_aug75 | lev=651 | norm_sim=0.697
+2025-12-07 18:42:03 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 18:42:03 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 18:42:45 [INFO] [LORA] Example 2 | id=30_aug25 | lev=359 | norm_sim=0.807
+2025-12-07 18:42:45 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 18:42:45 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 18:43:06 [INFO] [LORA] Example 3 | id=56_aug31 | lev=110 | norm_sim=0.832
+2025-12-07 18:43:06 [INFO] [LORA]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-07 18:43:06 [INFO] [LORA]   PRED: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5329745279919684, "y": 0.4879682429141013, "z": 0.1715341011011012}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5071091011011012, "y": 0.5049745279919684, "z": 0.2089742429141013}, "scr
+2025-12-07 18:43:22 [INFO] [LORA] Example 4 | id=0_aug62 | lev=0 | norm_sim=1.000
+2025-12-07 18:43:22 [INFO] [LORA]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-07 18:43:22 [INFO] [LORA]   PRED: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-07 18:44:04 [INFO] [LORA] Example 5 | id=23_aug15 | lev=357 | norm_sim=0.808
+2025-12-07 18:44:04 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 18:44:04 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 18:44:14 [INFO] [LORA] Example 6 | id=45 | lev=0 | norm_sim=1.000
+2025-12-07 18:44:14 [INFO] [LORA]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-07 18:44:14 [INFO] [LORA]   PRED: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-07 18:44:56 [INFO] [LORA] Example 7 | id=22_aug21 | lev=357 | norm_sim=0.808
+2025-12-07 18:44:56 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 18:44:56 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 18:45:37 [INFO] [LORA] Example 8 | id=28_aug35 | lev=357 | norm_sim=0.807
+2025-12-07 18:45:37 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 18:45:37 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-07 18:46:03 [INFO] [LORA] Example 9 | id=15_aug58 | lev=0 | norm_sim=1.000
+2025-12-07 18:46:03 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 18:46:03 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-07 18:46:22 [INFO] [LORA] Example 10 | id=7_aug72 | lev=0 | norm_sim=1.000
+2025-12-07 18:46:22 [INFO] [LORA]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-07 18:46:22 [INFO] [LORA]   PRED: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-07 18:50:59 [INFO] [LORA] Processed 20 examples so far (including resumed).
+2025-12-07 18:59:16 [INFO] [LORA] Processed 40 examples so far (including resumed).
+2025-12-07 19:07:15 [INFO] [LORA] Processed 60 examples so far (including resumed).
+2025-12-07 19:14:15 [INFO] [LORA] Processed 80 examples so far (including resumed).
+2025-12-07 19:21:26 [INFO] [LORA] Processed 100 examples so far (including resumed).
+2025-12-07 19:28:17 [INFO] [LORA] Processed 120 examples so far (including resumed).
+2025-12-07 19:35:21 [INFO] [LORA] Processed 140 examples so far (including resumed).
+2025-12-07 19:45:15 [INFO] [LORA] Processed 160 examples so far (including resumed).
+2025-12-07 19:54:17 [INFO] [LORA] Processed 180 examples so far (including resumed).
+2025-12-07 20:02:44 [INFO] [LORA] Processed 200 examples so far (including resumed).
+2025-12-07 20:09:09 [INFO] [LORA] Processed 220 examples so far (including resumed).
+2025-12-07 20:16:23 [INFO] [LORA] Processed 240 examples so far (including resumed).
+2025-12-07 20:25:01 [INFO] [LORA] Processed 260 examples so far (including resumed).
+2025-12-07 20:32:33 [INFO] [LORA] Processed 280 examples so far (including resumed).
+2025-12-07 20:39:09 [INFO] [LORA] Processed 300 examples so far (including resumed).
+2025-12-07 20:47:09 [INFO] [LORA] Processed 320 examples so far (including resumed).
+2025-12-07 20:56:41 [INFO] [LORA] Processed 340 examples so far (including resumed).
+2025-12-07 21:05:20 [INFO] [LORA] Processed 360 examples so far (including resumed).
+2025-12-07 21:15:13 [INFO] [LORA] Processed 380 examples so far (including resumed).
+2025-12-07 21:24:08 [INFO] [LORA] Processed 400 examples so far (including resumed).
+2025-12-07 21:32:34 [INFO] [LORA] Processed 420 examples so far (including resumed).
+2025-12-07 21:43:21 [INFO] [LORA] Processed 440 examples so far (including resumed).
+2025-12-07 21:53:29 [INFO] [LORA] Processed 460 examples so far (including resumed).
+2025-12-07 22:03:26 [INFO] [LORA] Processed 480 examples so far (including resumed).
+2025-12-07 22:13:48 [INFO] [LORA] Processed 500 examples so far (including resumed).
+2025-12-07 22:13:48 [INFO] [LORA] EVALUATION COMPLETE in 12746.7s
+2025-12-07 22:13:48 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-07 22:13:48 [INFO] [LORA] Avg Levenshtein distance:       192.162
+2025-12-07 22:13:48 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.882
+2025-12-07 22:13:48 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-07 22:13:48 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-07 22:13:48 [INFO]   id=50_aug61 | lev=1414 | norm_sim=0.433
+2025-12-07 22:13:48 [INFO]   id=50_aug23 | lev=1395 | norm_sim=0.439
+2025-12-07 22:13:48 [INFO]   id=50_aug81 | lev=1392 | norm_sim=0.442
+2025-12-07 22:13:48 [INFO]   id=50_aug25 | lev=1384 | norm_sim=0.444
+2025-12-07 22:13:48 [INFO]   id=50_aug58 | lev=1382 | norm_sim=0.445
+2025-12-07 22:13:48 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-07 22:13:48 [INFO] Evaluation complete.
+2025-12-16 21:38:58 [INFO] ==========================================
+2025-12-16 21:38:58 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-16 21:38:58 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-16 21:38:58 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-16 21:38:58 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-16 21:38:58 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-16 21:38:58 [INFO] ==========================================
+2025-12-16 21:38:58 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-16 21:38:58 [INFO] Total test examples loaded: 500
+2025-12-16 21:38:58 [INFO] Loading tokenizer...
+2025-12-16 21:38:58 [INFO] Loading base model...
+2025-12-16 21:39:32 [INFO] === Evaluating model: BASE ===
+2025-12-16 21:39:32 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-16 21:39:33 [INFO] [BASE] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-16 21:39:33 [INFO] [BASE] EVALUATION COMPLETE in 0.6s
+2025-12-16 21:39:33 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-16 21:39:33 [INFO] [BASE] Avg Levenshtein distance:       900.408
+2025-12-16 21:39:33 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.406
+2025-12-16 21:39:33 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-16 21:39:33 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-16 21:39:33 [INFO]   id=50_aug81 | lev=1790 | norm_sim=0.283
+2025-12-16 21:39:33 [INFO]   id=50_aug78 | lev=1771 | norm_sim=0.289
+2025-12-16 21:39:33 [INFO]   id=50_aug61 | lev=1770 | norm_sim=0.291
+2025-12-16 21:39:33 [INFO]   id=50_aug52 | lev=1764 | norm_sim=0.294
+2025-12-16 21:39:33 [INFO]   id=50_aug25 | lev=1763 | norm_sim=0.292
+2025-12-16 21:39:33 [INFO] Loading LoRA model for evaluation...
+2025-12-16 21:39:33 [INFO] Loading tokenizer...
+2025-12-16 21:39:33 [INFO] Loading base model...
+2025-12-16 21:40:12 [INFO] === Evaluating model: LORA ===
+2025-12-16 21:40:12 [INFO] [LORA] Resuming from existing predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-16 21:40:13 [INFO] [LORA] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-16 21:40:13 [INFO] [LORA] EVALUATION COMPLETE in 0.5s
+2025-12-16 21:40:13 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-16 21:40:13 [INFO] [LORA] Avg Levenshtein distance:       192.162
+2025-12-16 21:40:13 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.882
+2025-12-16 21:40:13 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-16 21:40:13 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-16 21:40:13 [INFO]   id=50_aug61 | lev=1414 | norm_sim=0.433
+2025-12-16 21:40:13 [INFO]   id=50_aug23 | lev=1395 | norm_sim=0.439
+2025-12-16 21:40:13 [INFO]   id=50_aug81 | lev=1392 | norm_sim=0.442
+2025-12-16 21:40:13 [INFO]   id=50_aug25 | lev=1384 | norm_sim=0.444
+2025-12-16 21:40:13 [INFO]   id=50_aug58 | lev=1382 | norm_sim=0.445
+2025-12-16 21:40:13 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-16 21:40:13 [INFO] Evaluation complete.
+2025-12-16 21:42:44 [INFO] ==========================================
+2025-12-16 21:42:44 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-16 21:42:44 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-16 21:42:44 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-16 21:42:44 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-16 21:42:44 [INFO] RESUME_FROM_CHECKPOINT = False
+2025-12-16 21:42:44 [INFO] ==========================================
+2025-12-16 21:42:44 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-16 21:42:44 [INFO] Total test examples loaded: 500
+2025-12-16 21:42:44 [INFO] Loading tokenizer...
+2025-12-16 21:42:45 [INFO] Loading base model...
+2025-12-16 21:42:51 [INFO] === Evaluating model: BASE ===
+2025-12-16 21:42:51 [INFO] [BASE] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-16 21:43:28 [INFO] [BASE] Example 1 | id=33_aug75 | lev=1602 | norm_sim=0.499
+2025-12-16 21:43:28 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-16 21:43:28 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-16 21:44:03 [INFO] [BASE] Example 2 | id=30_aug25 | lev=1734 | norm_sim=0.457
+2025-12-16 21:44:03 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-16 21:44:03 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-16 21:44:12 [INFO] [BASE] Example 3 | id=56_aug31 | lev=475 | norm_sim=0.437
+2025-12-16 21:44:12 [INFO] [BASE]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-16 21:44:12 [INFO] [BASE]   PRED: {   "part": "KittingContainer",   "sequence": [     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables": {         "agent": "Large Screw 1",         "Loc": {           "x": 0.533,           "y": 0.488,           "z": 0.172         },         "screwDiameter": 0.012       }     },     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables":
+2025-12-16 21:44:24 [INFO] [BASE] Example 4 | id=0_aug62 | lev=492 | norm_sim=0.533
+2025-12-16 21:44:24 [INFO] [BASE]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-16 21:44:24 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 799, "y": 132},         "offsetToLocation": {"x": 523, "y": 87},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess1",       "interface": "ProcessInte
+2025-12-16 21:44:58 [INFO] [BASE] Example 5 | id=23_aug15 | lev=2007 | norm_sim=0.397
+2025-12-16 21:44:58 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-16 21:44:58 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 719,           "y": 187         },         "offsetToLocation": {           "x": 555,           "y": 82         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-16 21:45:04 [INFO] [BASE] Example 6 | id=45 | lev=284 | norm_sim=0.447
+2025-12-16 21:45:04 [INFO] [BASE]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-16 21:45:04 [INFO] [BASE]   PRED: {   "part": "NameTag",   "sequence": [     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "0",         "y": "0",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "3",         "y": "0",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interf
+2025-12-16 21:45:33 [INFO] [BASE] Example 7 | id=22_aug21 | lev=1407 | norm_sim=0.496
+2025-12-16 21:45:33 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-16 21:45:33 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-16 21:46:03 [INFO] [BASE] Example 8 | id=28_aug35 | lev=1407 | norm_sim=0.496
+2025-12-16 21:46:03 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-16 21:46:03 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-16 21:46:28 [INFO] [BASE] Example 9 | id=15_aug58 | lev=1135 | norm_sim=0.490
+2025-12-16 21:46:28 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-16 21:46:28 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 674, "y": 126},         "offsetToLocation": {"x": 389, "y": 114},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess2",       "interface": "ProcessInt
+2025-12-16 21:46:49 [INFO] [BASE] Example 10 | id=7_aug72 | lev=1417 | norm_sim=0.375
+2025-12-16 21:46:49 [INFO] [BASE]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-16 21:46:49 [INFO] [BASE]   PRED: {   "part": "ProductB",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 760,           "y": 155         },         "offsetToLocation": {           "x": 73,           "y": 160         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-16 21:51:22 [INFO] [BASE] Processed 20 examples so far (including resumed).
+2025-12-16 21:58:57 [INFO] [BASE] Processed 40 examples so far (including resumed).
+2025-12-16 22:07:10 [INFO] [BASE] Processed 60 examples so far (including resumed).
+2025-12-16 22:14:15 [INFO] [BASE] Processed 80 examples so far (including resumed).
+2025-12-16 22:21:28 [INFO] [BASE] Processed 100 examples so far (including resumed).
+2025-12-16 22:28:10 [INFO] [BASE] Processed 120 examples so far (including resumed).
+2025-12-16 22:35:19 [INFO] [BASE] Processed 140 examples so far (including resumed).
+2025-12-16 22:45:31 [INFO] [BASE] Processed 160 examples so far (including resumed).
+2025-12-16 22:52:51 [INFO] [BASE] Processed 180 examples so far (including resumed).
+2025-12-16 23:00:09 [INFO] [BASE] Processed 200 examples so far (including resumed).
+2025-12-16 23:06:04 [INFO] [BASE] Processed 220 examples so far (including resumed).
+2025-12-16 23:13:45 [INFO] [BASE] Processed 240 examples so far (including resumed).
+2025-12-16 23:23:04 [INFO] [BASE] Processed 260 examples so far (including resumed).
+2025-12-16 23:30:55 [INFO] [BASE] Processed 280 examples so far (including resumed).
+2025-12-16 23:37:29 [INFO] [BASE] Processed 300 examples so far (including resumed).
+2025-12-16 23:44:54 [INFO] [BASE] Processed 320 examples so far (including resumed).
+2025-12-16 23:54:45 [INFO] [BASE] Processed 340 examples so far (including resumed).
+2025-12-17 00:02:24 [INFO] [BASE] Processed 360 examples so far (including resumed).
+2025-12-17 00:11:35 [INFO] [BASE] Processed 380 examples so far (including resumed).
+2025-12-17 00:18:20 [INFO] [BASE] Processed 400 examples so far (including resumed).
+2025-12-17 00:26:17 [INFO] [BASE] Processed 420 examples so far (including resumed).
+2025-12-17 00:34:59 [INFO] [BASE] Processed 440 examples so far (including resumed).
+2025-12-17 00:43:13 [INFO] [BASE] Processed 460 examples so far (including resumed).
+2025-12-17 00:51:26 [INFO] [BASE] Processed 480 examples so far (including resumed).
+2025-12-17 00:59:19 [INFO] [BASE] Processed 500 examples so far (including resumed).
+2025-12-17 00:59:19 [INFO] [BASE] EVALUATION COMPLETE in 11788.5s
+2025-12-17 00:59:19 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-17 00:59:19 [INFO] [BASE] Avg Levenshtein distance:       1280.780
+2025-12-17 00:59:19 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.426
+2025-12-17 00:59:19 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-17 00:59:19 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-17 00:59:19 [INFO]   id=14_aug10 | lev=4303 | norm_sim=0.282
+2025-12-17 00:59:19 [INFO]   id=14_aug55 | lev=3829 | norm_sim=0.303
+2025-12-17 00:59:19 [INFO]   id=18_aug41 | lev=3751 | norm_sim=0.274
+2025-12-17 00:59:19 [INFO]   id=26_aug40 | lev=3409 | norm_sim=0.293
+2025-12-17 00:59:19 [INFO]   id=60_aug78 | lev=3139 | norm_sim=0.168
+2025-12-17 00:59:20 [INFO] Loading LoRA model for evaluation...
+2025-12-17 00:59:20 [INFO] Loading tokenizer...
+2025-12-17 00:59:20 [INFO] Loading base model...
+2025-12-17 00:59:57 [INFO] === Evaluating model: LORA ===
+2025-12-17 00:59:58 [INFO] [LORA] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-17 01:00:40 [INFO] [LORA] Example 1 | id=33_aug75 | lev=0 | norm_sim=1.000
+2025-12-17 01:00:40 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-17 01:00:40 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-17 01:01:17 [INFO] [LORA] Example 2 | id=30_aug25 | lev=0 | norm_sim=1.000
+2025-12-17 01:01:17 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-17 01:01:17 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-17 01:01:32 [INFO] [LORA] Example 3 | id=56_aug31 | lev=110 | norm_sim=0.832
+2025-12-17 01:01:32 [INFO] [LORA]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-17 01:01:32 [INFO] [LORA]   PRED: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5329745279919684, "y": 0.4879682429141013, "z": 0.1715341011011012}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5071091011011012, "y": 0.5049745279919684, "z": 0.2089742429141013}, "scr
+2025-12-17 01:01:44 [INFO] [LORA] Example 4 | id=0_aug62 | lev=0 | norm_sim=1.000
+2025-12-17 01:01:44 [INFO] [LORA]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-17 01:01:44 [INFO] [LORA]   PRED: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-17 01:02:21 [INFO] [LORA] Example 5 | id=23_aug15 | lev=0 | norm_sim=1.000
+2025-12-17 01:02:21 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-17 01:02:21 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-17 01:02:28 [INFO] [LORA] Example 6 | id=45 | lev=0 | norm_sim=1.000
+2025-12-17 01:02:28 [INFO] [LORA]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-17 01:02:28 [INFO] [LORA]   PRED: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-17 01:03:04 [INFO] [LORA] Example 7 | id=22_aug21 | lev=0 | norm_sim=1.000
+2025-12-17 01:03:04 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-17 01:03:04 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-17 01:03:41 [INFO] [LORA] Example 8 | id=28_aug35 | lev=0 | norm_sim=1.000
+2025-12-17 01:03:41 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-17 01:03:41 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-17 01:04:06 [INFO] [LORA] Example 9 | id=15_aug58 | lev=0 | norm_sim=1.000
+2025-12-17 01:04:06 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-17 01:04:06 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-17 01:04:24 [INFO] [LORA] Example 10 | id=7_aug72 | lev=0 | norm_sim=1.000
+2025-12-17 01:04:24 [INFO] [LORA]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-17 01:04:24 [INFO] [LORA]   PRED: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-17 01:09:22 [INFO] [LORA] Processed 20 examples so far (including resumed).
+2025-12-17 01:17:53 [INFO] [LORA] Processed 40 examples so far (including resumed).
+2025-12-17 01:26:28 [INFO] [LORA] Processed 60 examples so far (including resumed).
+2025-12-17 01:34:10 [INFO] [LORA] Processed 80 examples so far (including resumed).
+2025-12-17 01:42:10 [INFO] [LORA] Processed 100 examples so far (including resumed).
+2025-12-17 01:49:39 [INFO] [LORA] Processed 120 examples so far (including resumed).
+2025-12-17 01:58:29 [INFO] [LORA] Processed 140 examples so far (including resumed).
+2025-12-17 02:09:39 [INFO] [LORA] Processed 160 examples so far (including resumed).
+2025-12-17 02:18:03 [INFO] [LORA] Processed 180 examples so far (including resumed).
+2025-12-17 02:27:05 [INFO] [LORA] Processed 200 examples so far (including resumed).
+2025-12-17 02:33:49 [INFO] [LORA] Processed 220 examples so far (including resumed).
+2025-12-17 02:41:29 [INFO] [LORA] Processed 240 examples so far (including resumed).
+2025-12-17 02:51:16 [INFO] [LORA] Processed 260 examples so far (including resumed).
+2025-12-17 03:00:00 [INFO] [LORA] Processed 280 examples so far (including resumed).
+2025-12-17 03:06:59 [INFO] [LORA] Processed 300 examples so far (including resumed).
+2025-12-17 03:15:17 [INFO] [LORA] Processed 320 examples so far (including resumed).
+2025-12-17 03:25:57 [INFO] [LORA] Processed 340 examples so far (including resumed).
+2025-12-17 03:35:46 [INFO] [LORA] Processed 360 examples so far (including resumed).
+2025-12-17 03:45:57 [INFO] [LORA] Processed 380 examples so far (including resumed).
+2025-12-17 03:53:39 [INFO] [LORA] Processed 400 examples so far (including resumed).
+2025-12-17 04:02:06 [INFO] [LORA] Processed 420 examples so far (including resumed).
+2025-12-17 04:11:51 [INFO] [LORA] Processed 440 examples so far (including resumed).
+2025-12-17 04:20:52 [INFO] [LORA] Processed 460 examples so far (including resumed).
+2025-12-17 04:29:15 [INFO] [LORA] Processed 480 examples so far (including resumed).
+2025-12-17 04:38:17 [INFO] [LORA] Processed 500 examples so far (including resumed).
+2025-12-17 04:38:17 [INFO] [LORA] EVALUATION COMPLETE in 13099.6s
+2025-12-17 04:38:17 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-17 04:38:17 [INFO] [LORA] Avg Levenshtein distance:       80.850
+2025-12-17 04:38:17 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.943
+2025-12-17 04:38:17 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-17 04:38:17 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-17 04:38:17 [INFO]   id=58_aug66 | lev=1422 | norm_sim=0.430
+2025-12-17 04:38:17 [INFO]   id=58_aug81 | lev=1401 | norm_sim=0.437
+2025-12-17 04:38:17 [INFO]   id=58_aug65 | lev=1377 | norm_sim=0.448
+2025-12-17 04:38:17 [INFO]   id=58_aug70 | lev=1368 | norm_sim=0.445
+2025-12-17 04:38:17 [INFO]   id=58_aug3 | lev=1364 | norm_sim=0.443
+2025-12-17 04:38:17 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-17 04:38:17 [INFO] Evaluation complete.
+2025-12-21 16:28:41 [INFO] ==========================================
+2025-12-21 16:28:41 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 16:28:41 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 16:28:41 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 16:28:41 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 16:28:41 [INFO] RESUME_FROM_CHECKPOINT = False
+2025-12-21 16:28:41 [INFO] ==========================================
+2025-12-21 16:28:41 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 16:28:41 [INFO] Total test examples loaded: 500
+2025-12-21 16:28:41 [INFO] Loading tokenizer...
+2025-12-21 16:28:41 [INFO] Loading base model...
+2025-12-21 16:28:43 [INFO] === Evaluating model: BASE ===
+2025-12-21 16:28:43 [INFO] [BASE] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-21 16:35:32 [INFO] [BASE] Example 1 | id=33_aug75 | lev=1602 | norm_sim=0.499
+2025-12-21 16:35:32 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-21 16:35:32 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 16:42:13 [INFO] [BASE] Example 2 | id=30_aug25 | lev=1734 | norm_sim=0.457
+2025-12-21 16:42:13 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-21 16:42:13 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 16:46:16 [INFO] [BASE] Example 3 | id=56_aug31 | lev=475 | norm_sim=0.437
+2025-12-21 16:46:16 [INFO] [BASE]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-21 16:46:16 [INFO] [BASE]   PRED: {   "part": "KittingContainer",   "sequence": [     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables": {         "agent": "Large Screw 1",         "Loc": {           "x": 0.533,           "y": 0.488,           "z": 0.172         },         "screwDiameter": 0.012       }     },     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables":
+2025-12-21 16:49:38 [INFO] [BASE] Example 4 | id=0_aug62 | lev=907 | norm_sim=0.387
+2025-12-21 16:49:38 [INFO] [BASE]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-21 16:49:38 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 799,           "y": 132         },         "offsetToLocation": {           "x": 523,           "y": 87         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-21 16:56:22 [INFO] [BASE] Example 5 | id=23_aug15 | lev=2007 | norm_sim=0.397
+2025-12-21 16:56:22 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-21 16:56:22 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 719,           "y": 187         },         "offsetToLocation": {           "x": 555,           "y": 82         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-21 16:58:00 [INFO] [BASE] Example 6 | id=45 | lev=287 | norm_sim=0.448
+2025-12-21 16:58:00 [INFO] [BASE]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-21 16:58:00 [INFO] [BASE]   PRED: {   "part": "NameTag",   "sequence": [     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "0",         "y": "30",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "60",         "y": "30",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "int
+2025-12-21 17:03:56 [INFO] [BASE] Example 7 | id=22_aug21 | lev=1407 | norm_sim=0.496
+2025-12-21 17:03:56 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-21 17:03:56 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 17:09:50 [INFO] [BASE] Example 8 | id=28_aug35 | lev=1407 | norm_sim=0.496
+2025-12-21 17:09:50 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-21 17:09:50 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 17:15:03 [INFO] [BASE] Example 9 | id=15_aug58 | lev=1135 | norm_sim=0.490
+2025-12-21 17:15:03 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-21 17:15:03 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 674, "y": 126},         "offsetToLocation": {"x": 389, "y": 114},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess2",       "interface": "ProcessInt
+2025-12-21 17:19:45 [INFO] [BASE] Example 10 | id=7_aug72 | lev=1417 | norm_sim=0.375
+2025-12-21 17:19:45 [INFO] [BASE]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-21 17:19:45 [INFO] [BASE]   PRED: {   "part": "ProductB",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 760,           "y": 155         },         "offsetToLocation": {           "x": 73,           "y": 160         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-21 17:42:21 [INFO] ==========================================
+2025-12-21 17:42:21 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 17:42:21 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 17:42:21 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 17:42:21 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 17:42:21 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 17:42:21 [INFO] ==========================================
+2025-12-21 17:42:21 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 17:42:22 [INFO] Total test examples loaded: 500
+2025-12-21 17:42:22 [INFO] Loading tokenizer...
+2025-12-21 17:42:22 [INFO] Loading base model...
+2025-12-21 17:42:28 [INFO] === Evaluating model: BASE ===
+2025-12-21 17:42:28 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 17:42:28 [INFO] [BASE] Loaded 14 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 17:42:42 [INFO] ==========================================
+2025-12-21 17:42:42 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 17:42:42 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 17:42:42 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 17:42:42 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 17:42:42 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 17:42:42 [INFO] ==========================================
+2025-12-21 17:42:42 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 17:42:42 [INFO] Total test examples loaded: 500
+2025-12-21 17:42:42 [INFO] Loading tokenizer...
+2025-12-21 17:42:42 [INFO] Loading base model...
+2025-12-21 17:42:49 [INFO] === Evaluating model: BASE ===
+2025-12-21 17:42:49 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 17:42:49 [INFO] [BASE] Loaded 14 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 17:45:33 [INFO] [BASE] Processed 20 examples so far (including resumed).
+2025-12-21 17:53:03 [INFO] [BASE] Processed 40 examples so far (including resumed).
+2025-12-21 18:01:08 [INFO] [BASE] Processed 60 examples so far (including resumed).
+2025-12-21 18:08:05 [INFO] [BASE] Processed 80 examples so far (including resumed).
+2025-12-21 18:15:08 [INFO] [BASE] Processed 100 examples so far (including resumed).
+2025-12-21 18:21:43 [INFO] [BASE] Processed 120 examples so far (including resumed).
+2025-12-21 18:28:58 [INFO] [BASE] Processed 140 examples so far (including resumed).
+2025-12-21 18:39:34 [INFO] [BASE] Processed 160 examples so far (including resumed).
+2025-12-21 18:47:09 [INFO] [BASE] Processed 180 examples so far (including resumed).
+2025-12-21 18:54:45 [INFO] [BASE] Processed 200 examples so far (including resumed).
+2025-12-21 19:00:55 [INFO] [BASE] Processed 220 examples so far (including resumed).
+2025-12-21 19:08:52 [INFO] [BASE] Processed 240 examples so far (including resumed).
+2025-12-21 19:18:38 [INFO] [BASE] Processed 260 examples so far (including resumed).
+2025-12-21 19:26:43 [INFO] [BASE] Processed 280 examples so far (including resumed).
+2025-12-21 19:33:31 [INFO] [BASE] Processed 300 examples so far (including resumed).
+2025-12-21 19:41:17 [INFO] [BASE] Processed 320 examples so far (including resumed).
+2025-12-21 19:51:41 [INFO] [BASE] Processed 340 examples so far (including resumed).
+2025-12-21 19:59:48 [INFO] [BASE] Processed 360 examples so far (including resumed).
+2025-12-21 20:09:29 [INFO] [BASE] Processed 380 examples so far (including resumed).
+2025-12-21 20:16:34 [INFO] [BASE] Processed 400 examples so far (including resumed).
+2025-12-21 20:25:04 [INFO] [BASE] Processed 420 examples so far (including resumed).
+2025-12-21 20:34:20 [INFO] [BASE] Processed 440 examples so far (including resumed).
+2025-12-21 20:43:05 [INFO] [BASE] Processed 460 examples so far (including resumed).
+2025-12-21 20:51:46 [INFO] [BASE] Processed 480 examples so far (including resumed).
+2025-12-21 21:00:11 [INFO] [BASE] Processed 500 examples so far (including resumed).
+2025-12-21 21:00:11 [INFO] [BASE] EVALUATION COMPLETE in 11842.5s
+2025-12-21 21:00:11 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-21 21:00:11 [INFO] [BASE] Avg Levenshtein distance:       1280.720
+2025-12-21 21:00:11 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.426
+2025-12-21 21:00:11 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 21:00:11 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-21 21:00:11 [INFO]   id=14_aug10 | lev=4303 | norm_sim=0.282
+2025-12-21 21:00:11 [INFO]   id=14_aug55 | lev=3829 | norm_sim=0.303
+2025-12-21 21:00:11 [INFO]   id=18_aug41 | lev=3751 | norm_sim=0.274
+2025-12-21 21:00:11 [INFO]   id=26_aug40 | lev=3409 | norm_sim=0.293
+2025-12-21 21:00:11 [INFO]   id=60_aug78 | lev=3139 | norm_sim=0.168
+2025-12-21 21:00:11 [INFO] Loading LoRA model for evaluation...
+2025-12-21 21:00:11 [INFO] Loading tokenizer...
+2025-12-21 21:00:12 [INFO] Loading base model...
+2025-12-21 21:00:51 [INFO] === Evaluating model: LORA ===
+2025-12-21 21:00:51 [INFO] [LORA] Resuming from existing predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-21 21:00:51 [INFO] [LORA] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 21:00:51 [INFO] [LORA] EVALUATION COMPLETE in 0.6s
+2025-12-21 21:00:51 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-21 21:00:51 [INFO] [LORA] Avg Levenshtein distance:       80.850
+2025-12-21 21:00:51 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.943
+2025-12-21 21:00:51 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-21 21:00:51 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-21 21:00:51 [INFO]   id=58_aug66 | lev=1422 | norm_sim=0.430
+2025-12-21 21:00:51 [INFO]   id=58_aug81 | lev=1401 | norm_sim=0.437
+2025-12-21 21:00:51 [INFO]   id=58_aug65 | lev=1377 | norm_sim=0.448
+2025-12-21 21:00:51 [INFO]   id=58_aug70 | lev=1368 | norm_sim=0.445
+2025-12-21 21:00:51 [INFO]   id=58_aug3 | lev=1364 | norm_sim=0.443
+2025-12-21 21:00:51 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-21 21:00:51 [INFO] Evaluation complete.
+2025-12-21 21:00:51 [INFO] ==========================================
+2025-12-21 21:00:51 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 21:00:51 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 21:00:51 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 21:00:51 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 21:00:51 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 21:00:51 [INFO] ==========================================
+2025-12-21 21:00:51 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 21:00:51 [INFO] Total test examples loaded: 500
+2025-12-21 21:00:51 [INFO] Loading tokenizer...
+2025-12-21 21:00:52 [INFO] Loading base model...
+2025-12-21 21:00:58 [INFO] === Evaluating model: BASE ===
+2025-12-21 21:00:58 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 21:00:58 [INFO] [BASE] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 21:00:58 [INFO] [BASE] EVALUATION COMPLETE in 0.0s
+2025-12-21 21:00:58 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-21 21:00:58 [INFO] [BASE] Avg Levenshtein distance:       1280.720
+2025-12-21 21:00:58 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.426
+2025-12-21 21:00:58 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 21:00:58 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-21 21:00:58 [INFO]   id=14_aug10 | lev=4303 | norm_sim=0.282
+2025-12-21 21:00:58 [INFO]   id=14_aug55 | lev=3829 | norm_sim=0.303
+2025-12-21 21:00:58 [INFO]   id=18_aug41 | lev=3751 | norm_sim=0.274
+2025-12-21 21:00:58 [INFO]   id=26_aug40 | lev=3409 | norm_sim=0.293
+2025-12-21 21:00:58 [INFO]   id=60_aug78 | lev=3139 | norm_sim=0.168
+2025-12-21 21:00:58 [INFO] Loading LoRA model for evaluation...
+2025-12-21 21:00:58 [INFO] Loading tokenizer...
+2025-12-21 21:00:58 [INFO] Loading base model...
+2025-12-21 21:01:36 [INFO] === Evaluating model: LORA ===
+2025-12-21 21:01:36 [INFO] [LORA] Resuming from existing predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-21 21:01:36 [INFO] [LORA] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 21:01:36 [INFO] [LORA] EVALUATION COMPLETE in 0.0s
+2025-12-21 21:01:36 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-21 21:01:36 [INFO] [LORA] Avg Levenshtein distance:       80.850
+2025-12-21 21:01:36 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.943
+2025-12-21 21:01:36 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-21 21:01:36 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-21 21:01:36 [INFO]   id=58_aug66 | lev=1422 | norm_sim=0.430
+2025-12-21 21:01:36 [INFO]   id=58_aug81 | lev=1401 | norm_sim=0.437
+2025-12-21 21:01:36 [INFO]   id=58_aug65 | lev=1377 | norm_sim=0.448
+2025-12-21 21:01:36 [INFO]   id=58_aug70 | lev=1368 | norm_sim=0.445
+2025-12-21 21:01:36 [INFO]   id=58_aug3 | lev=1364 | norm_sim=0.443
+2025-12-21 21:01:36 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-21 21:01:36 [INFO] Evaluation complete.
+2025-12-21 21:54:55 [INFO] ==========================================
+2025-12-21 21:54:55 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 21:54:55 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 21:54:55 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 21:54:55 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 21:54:55 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 21:54:55 [INFO] ==========================================
+2025-12-21 21:54:55 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 21:54:55 [INFO] Total test examples loaded: 500
+2025-12-21 21:54:55 [INFO] Loading tokenizer...
+2025-12-21 21:54:55 [INFO] Loading base model...
+2025-12-21 21:55:01 [INFO] === Evaluating model: BASE ===
+2025-12-21 21:55:01 [INFO] [BASE] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-21 22:25:48 [INFO] ==========================================
+2025-12-21 22:25:48 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 22:25:48 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 22:25:48 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 22:25:48 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 22:25:48 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 22:25:48 [INFO] ==========================================
+2025-12-21 22:25:48 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 22:25:48 [INFO] Total test examples loaded: 500
+2025-12-21 22:25:48 [INFO] Loading tokenizer...
+2025-12-21 22:25:48 [INFO] Loading base model...
+2025-12-21 22:28:32 [INFO] ==========================================
+2025-12-21 22:28:32 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 22:28:32 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 22:28:32 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 22:28:32 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 22:28:32 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 22:28:32 [INFO] ==========================================
+2025-12-21 22:28:32 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 22:28:32 [INFO] Total test examples loaded: 500
+2025-12-21 22:28:32 [INFO] Loading tokenizer...
+2025-12-21 22:28:33 [INFO] Loading base model...
+2025-12-21 22:28:39 [INFO] === Evaluating model: BASE ===
+2025-12-21 22:28:39 [INFO] [BASE] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-21 22:29:15 [INFO] [BASE] Example 1 | id=33_aug75 | lev=1602 | norm_sim=0.499
+2025-12-21 22:29:15 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-21 22:29:15 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 22:29:49 [INFO] [BASE] Example 2 | id=30_aug25 | lev=1734 | norm_sim=0.457
+2025-12-21 22:29:49 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-21 22:29:49 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 22:29:58 [INFO] [BASE] Example 3 | id=56_aug31 | lev=475 | norm_sim=0.437
+2025-12-21 22:29:58 [INFO] [BASE]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-21 22:29:58 [INFO] [BASE]   PRED: {   "part": "KittingContainer",   "sequence": [     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables": {         "agent": "Large Screw 1",         "Loc": {           "x": 0.533,           "y": 0.488,           "z": 0.172         },         "screwDiameter": 0.012       }     },     {       "skill": "KitScrew",       "interface": "screwinterface",       "variables":
+2025-12-21 22:30:10 [INFO] [BASE] Example 4 | id=0_aug62 | lev=492 | norm_sim=0.533
+2025-12-21 22:30:10 [INFO] [BASE]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-21 22:30:10 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 799, "y": 132},         "offsetToLocation": {"x": 523, "y": 87},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess1",       "interface": "ProcessInte
+2025-12-21 22:30:44 [INFO] [BASE] Example 5 | id=23_aug15 | lev=2007 | norm_sim=0.397
+2025-12-21 22:30:44 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-21 22:30:44 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 719,           "y": 187         },         "offsetToLocation": {           "x": 555,           "y": 82         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-21 22:30:50 [INFO] [BASE] Example 6 | id=45 | lev=284 | norm_sim=0.447
+2025-12-21 22:30:50 [INFO] [BASE]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-21 22:30:50 [INFO] [BASE]   PRED: {   "part": "NameTag",   "sequence": [     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "0",         "y": "0",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interface": "Hole",       "variables": {         "x": "3",         "y": "0",         "Diameter": "3"       }     },     {       "skill": "MakeAhole",       "interf
+2025-12-21 22:31:19 [INFO] [BASE] Example 7 | id=22_aug21 | lev=1407 | norm_sim=0.496
+2025-12-21 22:31:19 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-21 22:31:19 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 22:31:49 [INFO] [BASE] Example 8 | id=28_aug35 | lev=1407 | norm_sim=0.496
+2025-12-21 22:31:49 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-21 22:31:49 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 0,           "y": 0         },         "offsetToLocation": {           "x": 0,           "y": 0         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {           "x":
+2025-12-21 22:32:14 [INFO] [BASE] Example 9 | id=15_aug58 | lev=1135 | norm_sim=0.490
+2025-12-21 22:32:14 [INFO] [BASE]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-21 22:32:14 [INFO] [BASE]   PRED: {   "part": "ProductA",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {"x": 674, "y": 126},         "offsetToLocation": {"x": 389, "y": 114},         "fromLocation": {"x": 0, "y": 0},         "OffsetFromLocation": {"x": 0, "y": 0}       }     },     {       "skill": "RunProcess2",       "interface": "ProcessInt
+2025-12-21 22:32:35 [INFO] [BASE] Example 10 | id=7_aug72 | lev=1417 | norm_sim=0.375
+2025-12-21 22:32:35 [INFO] [BASE]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-21 22:32:35 [INFO] [BASE]   PRED: {   "part": "ProductB",   "sequence": [     {       "skill": "transportPart",       "interface": "CraneInterface",       "variables": {         "toLocation": {           "x": 760,           "y": 155         },         "offsetToLocation": {           "x": 73,           "y": 160         },         "fromLocation": {           "x": 0,           "y": 0         },         "OffsetFromLocation": {        
+2025-12-21 22:37:08 [INFO] [BASE] Processed 20 examples so far (including resumed).
+2025-12-21 22:44:42 [INFO] [BASE] Processed 40 examples so far (including resumed).
+2025-12-21 22:48:11 [INFO] ==========================================
+2025-12-21 22:48:11 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 22:48:11 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 22:48:11 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 22:48:11 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 22:48:11 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 22:48:11 [INFO] ==========================================
+2025-12-21 22:48:11 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 22:48:11 [INFO] Total test examples loaded: 500
+2025-12-21 22:48:11 [INFO] Loading tokenizer...
+2025-12-21 22:48:11 [INFO] Loading base model...
+2025-12-21 22:48:14 [INFO] === Evaluating model: BASE ===
+2025-12-21 22:48:14 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 22:48:14 [INFO] [BASE] Loaded 49 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 23:11:58 [INFO] ==========================================
+2025-12-21 23:11:58 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 23:11:58 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 23:11:58 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 23:11:58 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 23:11:58 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 23:11:58 [INFO] ==========================================
+2025-12-21 23:11:58 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 23:11:58 [INFO] Total test examples loaded: 500
+2025-12-21 23:11:58 [INFO] Loading tokenizer...
+2025-12-21 23:11:59 [INFO] Loading base model...
+2025-12-21 23:12:01 [INFO] === Evaluating model: BASE ===
+2025-12-21 23:12:01 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 23:12:01 [INFO] [BASE] Loaded 50 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 23:38:12 [INFO] ==========================================
+2025-12-21 23:38:12 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-21 23:38:12 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-21 23:38:12 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-21 23:38:12 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-21 23:38:12 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-21 23:38:12 [INFO] ==========================================
+2025-12-21 23:38:12 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-21 23:38:12 [INFO] Total test examples loaded: 500
+2025-12-21 23:38:12 [INFO] Loading tokenizer...
+2025-12-21 23:38:12 [INFO] Loading base model...
+2025-12-21 23:38:19 [INFO] === Evaluating model: BASE ===
+2025-12-21 23:38:19 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-21 23:38:19 [INFO] [BASE] Loaded 54 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-21 23:41:04 [INFO] [BASE] Processed 60 examples so far (including resumed).
+2025-12-21 23:48:06 [INFO] [BASE] Processed 80 examples so far (including resumed).
+2025-12-21 23:55:16 [INFO] [BASE] Processed 100 examples so far (including resumed).
+2025-12-22 00:01:57 [INFO] [BASE] Processed 120 examples so far (including resumed).
+2025-12-22 00:09:05 [INFO] [BASE] Processed 140 examples so far (including resumed).
+2025-12-22 00:19:15 [INFO] [BASE] Processed 160 examples so far (including resumed).
+2025-12-22 00:26:33 [INFO] [BASE] Processed 180 examples so far (including resumed).
+2025-12-22 00:33:50 [INFO] [BASE] Processed 200 examples so far (including resumed).
+2025-12-22 00:39:44 [INFO] [BASE] Processed 220 examples so far (including resumed).
+2025-12-22 00:47:23 [INFO] [BASE] Processed 240 examples so far (including resumed).
+2025-12-22 00:56:43 [INFO] [BASE] Processed 260 examples so far (including resumed).
+2025-12-22 01:04:35 [INFO] [BASE] Processed 280 examples so far (including resumed).
+2025-12-22 01:11:10 [INFO] [BASE] Processed 300 examples so far (including resumed).
+2025-12-22 01:18:38 [INFO] [BASE] Processed 320 examples so far (including resumed).
+2025-12-22 01:28:34 [INFO] [BASE] Processed 340 examples so far (including resumed).
+2025-12-22 01:36:19 [INFO] [BASE] Processed 360 examples so far (including resumed).
+2025-12-22 01:45:36 [INFO] [BASE] Processed 380 examples so far (including resumed).
+2025-12-22 01:52:26 [INFO] [BASE] Processed 400 examples so far (including resumed).
+2025-12-22 02:00:28 [INFO] [BASE] Processed 420 examples so far (including resumed).
+2025-12-22 02:09:20 [INFO] [BASE] Processed 440 examples so far (including resumed).
+2025-12-22 02:17:44 [INFO] [BASE] Processed 460 examples so far (including resumed).
+2025-12-22 02:26:08 [INFO] [BASE] Processed 480 examples so far (including resumed).
+2025-12-22 02:34:11 [INFO] [BASE] Processed 500 examples so far (including resumed).
+2025-12-22 02:34:11 [INFO] [BASE] EVALUATION COMPLETE in 10552.1s
+2025-12-22 02:34:11 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-22 02:34:11 [INFO] [BASE] Avg Levenshtein distance:       1280.786
+2025-12-22 02:34:11 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.426
+2025-12-22 02:34:11 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-22 02:34:11 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-22 02:34:11 [INFO]   id=14_aug10 | lev=4303 | norm_sim=0.282
+2025-12-22 02:34:11 [INFO]   id=14_aug55 | lev=3829 | norm_sim=0.303
+2025-12-22 02:34:11 [INFO]   id=18_aug41 | lev=3751 | norm_sim=0.274
+2025-12-22 02:34:11 [INFO]   id=26_aug40 | lev=3409 | norm_sim=0.293
+2025-12-22 02:34:11 [INFO]   id=60_aug78 | lev=3139 | norm_sim=0.168
+2025-12-22 02:34:11 [INFO] Loading LoRA model for evaluation...
+2025-12-22 02:34:11 [INFO] Loading tokenizer...
+2025-12-22 02:34:11 [INFO] Loading base model...
+2025-12-22 02:34:50 [INFO] === Evaluating model: LORA ===
+2025-12-22 02:34:50 [INFO] [LORA] No existing predictions found (or resume disabled). Starting fresh.
+2025-12-22 02:35:34 [INFO] [LORA] Example 1 | id=33_aug75 | lev=0 | norm_sim=1.000
+2025-12-22 02:35:34 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-22 02:35:34 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 711, "y": 85}, "offsetToLocation": {"x": 209, "y": 123}, "fromLocation": {"x": 393, "y": 86}, "OffsetFromLocation": {"x": 271, "y": 167}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-22 02:36:11 [INFO] [LORA] Example 2 | id=30_aug25 | lev=0 | norm_sim=1.000
+2025-12-22 02:36:11 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-22 02:36:11 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 693, "y": 148}, "offsetToLocation": {"x": 788, "y": 150}, "fromLocation": {"x": 288, "y": 150}, "OffsetFromLocation": {"x": 175, "y": 195}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-22 02:36:27 [INFO] [LORA] Example 3 | id=56_aug31 | lev=110 | norm_sim=0.832
+2025-12-22 02:36:27 [INFO] [LORA]   GOLD: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5333321041221333, "y": 0.4877693065890147, "z": 0.1723748738690148}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.506838572787918, "y": 0.5054400072037714, "z": 0.20945871988571635}, "scr
+2025-12-22 02:36:27 [INFO] [LORA]   PRED: {"part": "KittingContainer", "sequence": [{"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5329745279919684, "y": 0.4879682429141013, "z": 0.1715341011011012}, "screwDiameter": 0.012}, "screw": "Large Screw 1"}, {"interface": "screwinterface", "skill": "KitScrew", "variables": {"Loc": {"x": 0.5071091011011012, "y": 0.5049745279919684, "z": 0.2089742429141013}, "scr
+2025-12-22 02:36:39 [INFO] [LORA] Example 4 | id=0_aug62 | lev=0 | norm_sim=1.000
+2025-12-22 02:36:39 [INFO] [LORA]   GOLD: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-22 02:36:39 [INFO] [LORA]   PRED: {"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 799, "y": 132}, "offsetToLocation": {"x": 523, "y": 87}, "fromLocation": {"x": 914, "y": 175}, "OffsetFromLocation": {"x": 355, "y": 191}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-22 02:37:17 [INFO] [LORA] Example 5 | id=23_aug15 | lev=0 | norm_sim=1.000
+2025-12-22 02:37:17 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-22 02:37:17 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 719, "y": 187}, "offsetToLocation": {"x": 555, "y": 82}, "fromLocation": {"x": 176, "y": 88}, "OffsetFromLocation": {"x": 520, "y": 157}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-22 02:37:24 [INFO] [LORA] Example 6 | id=45 | lev=0 | norm_sim=1.000
+2025-12-22 02:37:24 [INFO] [LORA]   GOLD: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-22 02:37:24 [INFO] [LORA]   PRED: {"part": "NameTag", "sequence": [{"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 15, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 30, "y": 30, "Diameter": 5.5}}, {"interface": "Hole", "skill": "MakeAhole", "variables": {"x": 45, "y": 30, "Diameter": 5.5}}]}
+2025-12-22 02:38:02 [INFO] [LORA] Example 7 | id=22_aug21 | lev=0 | norm_sim=1.000
+2025-12-22 02:38:02 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-22 02:38:02 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 438, "y": 162}, "offsetToLocation": {"x": 158, "y": 112}, "fromLocation": {"x": 695, "y": 115}, "OffsetFromLocation": {"x": 247, "y": 198}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-22 02:38:39 [INFO] [LORA] Example 8 | id=28_aug35 | lev=0 | norm_sim=1.000
+2025-12-22 02:38:39 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-22 02:38:39 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 567, "y": 114}, "offsetToLocation": {"x": 83, "y": 174}, "fromLocation": {"x": 326, "y": 113}, "OffsetFromLocation": {"x": 245, "y": 87}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "i
+2025-12-22 02:39:05 [INFO] [LORA] Example 9 | id=15_aug58 | lev=0 | norm_sim=1.000
+2025-12-22 02:39:05 [INFO] [LORA]   GOLD: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-22 02:39:05 [INFO] [LORA]   PRED: {"parts": ["ProductA", "ProductB"], "goals": [{"part": "ProductA", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 674, "y": 126}, "offsetToLocation": {"x": 389, "y": 114}, "fromLocation": {"x": 845, "y": 107}, "OffsetFromLocation": {"x": 892, "y": 106}}}, {"skill": "RunProcess2", "interface": "ProcessInterface"}, {"skill": "transportPart", 
+2025-12-22 02:39:23 [INFO] [LORA] Example 10 | id=7_aug72 | lev=0 | norm_sim=1.000
+2025-12-22 02:39:23 [INFO] [LORA]   GOLD: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-22 02:39:23 [INFO] [LORA]   PRED: {"part": "ProductB", "sequence": [{"skill": "transportPart", "interface": "CraneInterface", "variables": {"toLocation": {"x": 645, "y": 132}, "offsetToLocation": {"x": 542, "y": 194}, "fromLocation": {"x": 760, "y": 155}, "OffsetFromLocation": {"x": 73, "y": 160}}}, {"skill": "RunProcess1", "interface": "ProcessInterface"}, {"skill": "transportPart", "interface": "CraneInterface", "variables": {"t
+2025-12-22 02:44:27 [INFO] [LORA] Processed 20 examples so far (including resumed).
+2025-12-22 02:53:08 [INFO] [LORA] Processed 40 examples so far (including resumed).
+2025-12-22 03:01:52 [INFO] [LORA] Processed 60 examples so far (including resumed).
+2025-12-22 03:09:42 [INFO] [LORA] Processed 80 examples so far (including resumed).
+2025-12-22 03:17:50 [INFO] [LORA] Processed 100 examples so far (including resumed).
+2025-12-22 03:25:27 [INFO] [LORA] Processed 120 examples so far (including resumed).
+2025-12-22 03:34:24 [INFO] [LORA] Processed 140 examples so far (including resumed).
+2025-12-22 03:45:48 [INFO] [LORA] Processed 160 examples so far (including resumed).
+2025-12-22 03:54:27 [INFO] [LORA] Processed 180 examples so far (including resumed).
+2025-12-22 04:03:40 [INFO] [LORA] Processed 200 examples so far (including resumed).
+2025-12-22 04:10:30 [INFO] [LORA] Processed 220 examples so far (including resumed).
+2025-12-22 04:18:19 [INFO] [LORA] Processed 240 examples so far (including resumed).
+2025-12-22 04:28:16 [INFO] [LORA] Processed 260 examples so far (including resumed).
+2025-12-22 04:37:09 [INFO] [LORA] Processed 280 examples so far (including resumed).
+2025-12-22 04:44:15 [INFO] [LORA] Processed 300 examples so far (including resumed).
+2025-12-22 04:52:43 [INFO] [LORA] Processed 320 examples so far (including resumed).
+2025-12-22 05:03:34 [INFO] [LORA] Processed 340 examples so far (including resumed).
+2025-12-22 05:13:33 [INFO] [LORA] Processed 360 examples so far (including resumed).
+2025-12-22 05:23:56 [INFO] [LORA] Processed 380 examples so far (including resumed).
+2025-12-22 05:31:46 [INFO] [LORA] Processed 400 examples so far (including resumed).
+2025-12-22 05:40:23 [INFO] [LORA] Processed 420 examples so far (including resumed).
+2025-12-22 05:50:19 [INFO] [LORA] Processed 440 examples so far (including resumed).
+2025-12-22 05:59:31 [INFO] [LORA] Processed 460 examples so far (including resumed).
+2025-12-22 06:08:03 [INFO] [LORA] Processed 480 examples so far (including resumed).
+2025-12-22 06:17:15 [INFO] [LORA] Processed 500 examples so far (including resumed).
+2025-12-22 06:17:16 [INFO] [LORA] EVALUATION COMPLETE in 13345.8s
+2025-12-22 06:17:16 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-22 06:17:16 [INFO] [LORA] Avg Levenshtein distance:       80.850
+2025-12-22 06:17:16 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.943
+2025-12-22 06:17:16 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-22 06:17:16 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-22 06:17:16 [INFO]   id=58_aug66 | lev=1422 | norm_sim=0.430
+2025-12-22 06:17:16 [INFO]   id=58_aug81 | lev=1401 | norm_sim=0.437
+2025-12-22 06:17:16 [INFO]   id=58_aug65 | lev=1377 | norm_sim=0.448
+2025-12-22 06:17:16 [INFO]   id=58_aug70 | lev=1368 | norm_sim=0.445
+2025-12-22 06:17:16 [INFO]   id=58_aug3 | lev=1364 | norm_sim=0.443
+2025-12-22 06:17:16 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-22 06:17:16 [INFO] Evaluation complete.
+2025-12-22 06:17:16 [INFO] ==========================================
+2025-12-22 06:17:16 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-22 06:17:16 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-22 06:17:16 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-22 06:17:16 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-22 06:17:16 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-22 06:17:16 [INFO] ==========================================
+2025-12-22 06:17:16 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-22 06:17:16 [INFO] Total test examples loaded: 500
+2025-12-22 06:17:16 [INFO] Loading tokenizer...
+2025-12-22 06:17:16 [INFO] Loading base model...
+2025-12-22 06:17:20 [INFO] === Evaluating model: BASE ===
+2025-12-22 06:17:20 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-22 06:17:20 [INFO] [BASE] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-22 06:17:20 [INFO] [BASE] EVALUATION COMPLETE in 0.0s
+2025-12-22 06:17:20 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-22 06:17:20 [INFO] [BASE] Avg Levenshtein distance:       1280.786
+2025-12-22 06:17:20 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.426
+2025-12-22 06:17:20 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-22 06:17:20 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-22 06:17:20 [INFO]   id=14_aug10 | lev=4303 | norm_sim=0.282
+2025-12-22 06:17:20 [INFO]   id=14_aug55 | lev=3829 | norm_sim=0.303
+2025-12-22 06:17:20 [INFO]   id=18_aug41 | lev=3751 | norm_sim=0.274
+2025-12-22 06:17:20 [INFO]   id=26_aug40 | lev=3409 | norm_sim=0.293
+2025-12-22 06:17:20 [INFO]   id=60_aug78 | lev=3139 | norm_sim=0.168
+2025-12-22 06:17:20 [INFO] Loading LoRA model for evaluation...
+2025-12-22 06:17:20 [INFO] Loading tokenizer...
+2025-12-22 06:17:20 [INFO] Loading base model...
+2025-12-22 06:17:58 [INFO] === Evaluating model: LORA ===
+2025-12-22 06:17:58 [INFO] [LORA] Resuming from existing predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-22 06:17:58 [INFO] [LORA] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-22 06:17:58 [INFO] [LORA] EVALUATION COMPLETE in 0.0s
+2025-12-22 06:17:58 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-22 06:17:58 [INFO] [LORA] Avg Levenshtein distance:       80.850
+2025-12-22 06:17:58 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.943
+2025-12-22 06:17:58 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-22 06:17:58 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-22 06:17:58 [INFO]   id=58_aug66 | lev=1422 | norm_sim=0.430
+2025-12-22 06:17:58 [INFO]   id=58_aug81 | lev=1401 | norm_sim=0.437
+2025-12-22 06:17:58 [INFO]   id=58_aug65 | lev=1377 | norm_sim=0.448
+2025-12-22 06:17:58 [INFO]   id=58_aug70 | lev=1368 | norm_sim=0.445
+2025-12-22 06:17:58 [INFO]   id=58_aug3 | lev=1364 | norm_sim=0.443
+2025-12-22 06:17:58 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-22 06:17:58 [INFO] Evaluation complete.
+2025-12-22 06:17:58 [INFO] ==========================================
+2025-12-22 06:17:58 [INFO] Starting CMAS evaluation (greedy + checkpoint)…
+2025-12-22 06:17:58 [INFO] BASE_MODEL_DIR = /home/lpr5476/base_llm/
+2025-12-22 06:17:58 [INFO] LORA_DIR       = ./lora_tuned_model
+2025-12-22 06:17:58 [INFO] TEST_JSONL     = cmas_lora_test.jsonl
+2025-12-22 06:17:58 [INFO] RESUME_FROM_CHECKPOINT = True
+2025-12-22 06:17:58 [INFO] ==========================================
+2025-12-22 06:17:58 [INFO] Loading test data from: cmas_lora_test.jsonl
+2025-12-22 06:17:58 [INFO] Total test examples loaded: 500
+2025-12-22 06:17:58 [INFO] Loading tokenizer...
+2025-12-22 06:17:58 [INFO] Loading base model...
+2025-12-22 06:18:02 [INFO] === Evaluating model: BASE ===
+2025-12-22 06:18:02 [INFO] [BASE] Resuming from existing predictions file: cmas_eval_base_predictions.jsonl
+2025-12-22 06:18:02 [INFO] [BASE] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-22 06:18:02 [INFO] [BASE] EVALUATION COMPLETE in 0.0s
+2025-12-22 06:18:02 [INFO] [BASE] Examples evaluated (including resumed): 500
+2025-12-22 06:18:02 [INFO] [BASE] Avg Levenshtein distance:       1280.786
+2025-12-22 06:18:02 [INFO] [BASE] Avg normalized similarity (1-d/max): 0.426
+2025-12-22 06:18:02 [INFO] [BASE] Predictions file: cmas_eval_base_predictions.jsonl
+2025-12-22 06:18:02 [INFO] [BASE] Top-5 worst examples by Levenshtein:
+2025-12-22 06:18:02 [INFO]   id=14_aug10 | lev=4303 | norm_sim=0.282
+2025-12-22 06:18:02 [INFO]   id=14_aug55 | lev=3829 | norm_sim=0.303
+2025-12-22 06:18:02 [INFO]   id=18_aug41 | lev=3751 | norm_sim=0.274
+2025-12-22 06:18:02 [INFO]   id=26_aug40 | lev=3409 | norm_sim=0.293
+2025-12-22 06:18:02 [INFO]   id=60_aug78 | lev=3139 | norm_sim=0.168
+2025-12-22 06:18:02 [INFO] Loading LoRA model for evaluation...
+2025-12-22 06:18:02 [INFO] Loading tokenizer...
+2025-12-22 06:18:03 [INFO] Loading base model...
+2025-12-22 06:18:41 [INFO] === Evaluating model: LORA ===
+2025-12-22 06:18:41 [INFO] [LORA] Resuming from existing predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-22 06:18:41 [INFO] [LORA] Loaded 500 existing predictions from checkpoint. Will skip those IDs and continue with remaining examples.
+2025-12-22 06:18:41 [INFO] [LORA] EVALUATION COMPLETE in 0.0s
+2025-12-22 06:18:41 [INFO] [LORA] Examples evaluated (including resumed): 500
+2025-12-22 06:18:41 [INFO] [LORA] Avg Levenshtein distance:       80.850
+2025-12-22 06:18:41 [INFO] [LORA] Avg normalized similarity (1-d/max): 0.943
+2025-12-22 06:18:41 [INFO] [LORA] Predictions file: cmas_eval_lora_predictions.jsonl
+2025-12-22 06:18:41 [INFO] [LORA] Top-5 worst examples by Levenshtein:
+2025-12-22 06:18:41 [INFO]   id=58_aug66 | lev=1422 | norm_sim=0.430
+2025-12-22 06:18:41 [INFO]   id=58_aug81 | lev=1401 | norm_sim=0.437
+2025-12-22 06:18:41 [INFO]   id=58_aug65 | lev=1377 | norm_sim=0.448
+2025-12-22 06:18:41 [INFO]   id=58_aug70 | lev=1368 | norm_sim=0.445
+2025-12-22 06:18:41 [INFO]   id=58_aug3 | lev=1364 | norm_sim=0.443
+2025-12-22 06:18:42 [INFO] Saved aggregate metrics to: cmas_eval_metrics.json
+2025-12-22 06:18:42 [INFO] Evaluation complete.
